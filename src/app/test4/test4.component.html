@@ -1,0 +1,30 @@
+<input
+  type="text"
+  name="inputItem"
+  [(ngModel)]="inputItem"
+  (keypress)="keyPress($event)"
+/>
+<input
+  (click)="addItem()"
+  class="add-item-list"
+  type="button"
+  name="btnAdd"
+  value="Add Item"
+/>
+<input
+  class="remove-item-list"
+  type="button"
+  name="btnRemove"
+  value="Remove Item"
+  (click)="removeItem()"
+/>
+<input
+  class="clear-list"
+  type="button"
+  name="btnClear"
+  value="Clear List"
+  (click)="clearList()"
+/>
+<ul *ngFor="let item of itemsArr">
+  <li>{{ item[0] }}</li>
+</ul>
