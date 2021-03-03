@@ -1,0 +1,10 @@
+<input type="text" [(ngModel)]="groupInput" name="groupInput" />
+<button (click)="findGroup()">Find Group</button>
+<div *ngIf="groups.length > 0">
+  <ul *ngFor="let group of groups">
+    <li>There's {{ group[1] }} groups of {{ group[0] }}</li>
+  </ul>
+</div>
+<div *ngIf="groups.length == 0">
+  <h2>There's no groups of {{ groupInput }}</h2>
+</div>
